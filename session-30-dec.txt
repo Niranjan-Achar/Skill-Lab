@@ -1,0 +1,293 @@
+aniranjan@ubuntu:~/scripts$ ls
+emp1.lst  emp.lst  hello.sh  template.sh
+niranjan@ubuntu:~/scripts$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000 
+6521|lalit choudury   |director   |marketing  |09/26/45|125000 
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000 
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000 
+0110|v.k agarwal      |g.m.       |marketing  |12/31/40| 95000
+niranjan@ubuntu:~/scripts$ wc emp1.lst
+ 15  81 954 emp1.lst
+niranjan@ubuntu:~/scripts$ cat -l emp1.lst
+cat: invalid option -- 'l'
+Try 'cat --help' for more information.
+niranjan@ubuntu:~/scripts$ wc -l emp1.lst
+15 emp1.lst
+niranjan@ubuntu:~/scripts$ wc -w emp1.lst
+81 emp1.lst
+niranjan@ubuntu:~/scripts$ wc -c  emp1.lst
+954 emp1.lst
+niranjan@ubuntu:~/scripts$ wc  emp1.lst
+ 15  81 954 emp1.lst
+niranjan@ubuntu:~/scripts$ renamw emp1.lst > emp2.lst
+Command 'renamw' not found, did you mean:
+  command 'rename' from deb rename (2.02-1)
+Try: sudo apt install <deb name>
+niranjan@ubuntu:~/scripts$ rename emp1.lst > emp2.lst
+Command 'rename' not found, but can be installed with:
+sudo apt install rename
+niranjan@ubuntu:~/scripts$ ls
+emp1.lst  emp2.lst  emp.lst  hello.sh  template.sh
+niranjan@ubuntu:~/scripts$ nano emp2.lst
+niranjan@ubuntu:~/scripts$ rm emp2.lst
+niranjan@ubuntu:~/scripts$ ls
+emp1.lst  emp.lst  hello.sh  template.sh
+niranjan@ubuntu:~/scripts$ head emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000 
+niranjan@ubuntu:~/scripts$ head 5 emp1.lst
+head: cannot open '5' for reading: No such file or directory
+==> emp1.lst <==
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000 
+niranjan@ubuntu:~/scripts$ head -n 5 emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+niranjan@ubuntu:~/scripts$ head emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000 
+niranjan@ubuntu:~/scripts$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000 
+6521|lalit choudury   |director   |marketing  |09/26/45|125000 
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000 
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000 
+0110|v.k agarwal      |g.m.       |marketing  |12/31/40| 95000
+niranjan@ubuntu:~/scripts$ head -n 5 emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+niranjan@ubuntu:~/scripts$ ls chap
+ls: cannot access 'chap': No such file or directory
+niranjan@ubuntu:~/scripts$ cd ..
+niranjan@ubuntu:~$ cd desktop
+bash: cd: desktop: No such file or directory
+niranjan@ubuntu:~$ cd scripts
+niranjan@ubuntu:~/scripts$ ls emp
+ls: cannot access 'emp': No such file or directory
+niranjan@ubuntu:~/scripts$ ls
+emp1.lst  emp.lst  hello.sh  template.sh
+niranjan@ubuntu:~/scripts$ ls emp*
+emp1.lst  emp.lst
+niranjan@ubuntu:~/scripts$ ls emp
+ls: cannot access 'emp': No such file or directory
+niranjan@ubuntu:~/scripts$ ls emp*
+emp1.lst  emp.lst
+niranjan@ubuntu:~/scripts$ ls emp?
+ls: cannot access 'emp?': No such file or directory
+niranjan@ubuntu:~/scripts$ ls em?
+ls: cannot access 'em?': No such file or directory
+niranjan@ubuntu:~/scripts$ ls **/*.lst
+ls: cannot access '**/*.lst': No such file or directory
+niranjan@ubuntu:~/scripts$ ls
+emp1.lst  emp.lst  hello.sh  template.sh
+niranjan@ubuntu:~/scripts$ ls **/.lst
+ls: cannot access '**/.lst': No such file or directory
+niranjan@ubuntu:~/scripts$ ls **.lst
+emp1.lst  emp.lst
+niranjan@ubuntu:~/scripts$ ls
+emp1.lst  emp.lst  hello.sh  template.sh
+niranjan@ubuntu:~/scripts$ ls **.sh
+hello.sh  template.sh
+niranjan@ubuntu:~/scripts$ who
+niranjan seat0        2024-12-30 14:37 (login screen)
+niranjan :0           2024-12-30 14:37 (:0)
+niranjan@ubuntu:~/scripts$ ls /dev
+autofs           i2c-7         mem               stdin   tty36      ttyS0    urandom
+block            initctl       mqueue            stdout  tty37      ttyS1    usb
+bsg              input         net               tpm0    tty38      ttyS10   userfaultfd
+btrfs-control    kfd           ng0n1             tpmrm0  tty39      ttyS11   userio
+bus              kmsg          null              tty     tty4       ttyS12   v4l
+char             kvm           nvidia0           tty0    tty40      ttyS13   vcs
+console          log           nvidiactl         tty1    tty41      ttyS14   vcs1
+core             loop0         nvidia-modeset    tty10   tty42      ttyS15   vcs2
+cpu              loop1         nvidia-uvm        tty11   tty43      ttyS16   vcs3
+cpu_dma_latency  loop10        nvidia-uvm-tools  tty12   tty44      ttyS17   vcs4
+cuse             loop11        nvme0             tty13   tty45      ttyS18   vcs5
+disk             loop12        nvme0n1           tty14   tty46      ttyS19   vcs6
+dma_heap         loop13        nvme0n1p1         tty15   tty47      ttyS2    vcsa
+dri              loop14        nvme0n1p2         tty16   tty48      ttyS20   vcsa1
+drm_dp_aux0      loop15        nvme0n1p3         tty17   tty49      ttyS21   vcsa2
+ecryptfs         loop16        nvme0n1p4         tty18   tty5       ttyS22   vcsa3
+fb0              loop17        nvme0n1p5         tty19   tty50      ttyS23   vcsa4
+fd               loop18        nvme0n1p6         tty2    tty51      ttyS24   vcsa5
+freefall         loop19        nvram             tty20   tty52      ttyS25   vcsa6
+full             loop2         port              tty21   tty53      ttyS26   vcsu
+fuse             loop20        ppp               tty22   tty54      ttyS27   vcsu1
+gpiochip0        loop21        psaux             tty23   tty55      ttyS28   vcsu2
+hidraw0          loop22        ptmx              tty24   tty56      ttyS29   vcsu3
+hidraw1          loop23        pts               tty25   tty57      ttyS3    vcsu4
+hidraw2          loop3         random            tty26   tty58      ttyS30   vcsu5
+hpet             loop4         rfkill            tty27   tty59      ttyS31   vcsu6
+hugepages        loop5         rtc               tty28   tty6       ttyS4    vfio
+hwrng            loop6         rtc0              tty29   tty60      ttyS5    vga_arbiter
+i2c-0            loop7         sda               tty3    tty61      ttyS6    vhci
+i2c-1            loop8         sda1              tty30   tty62      ttyS7    vhost-net
+i2c-2            loop9         sg0               tty31   tty63      ttyS8    vhost-vsock
+i2c-3            loop-control  shm               tty32   tty7       ttyS9    video0
+i2c-4            mapper        snapshot          tty33   tty8       udmabuf  video1
+i2c-5            mcelog        snd               tty34   tty9       uhid     zero
+i2c-6            media0        stderr            tty35   ttyprintk  uinput   zfs
+niranjan@ubuntu:~/scripts$ ls /dev/tty
+/dev/tty
+niranjan@ubuntu:~/scripts$ cat /dev/tty
+nmnm
+nmnm
+
+
+
+
+
+
+^Z
+[1]+  Stopped                 cat /dev/tty
+niranjan@ubuntu:~/scripts$ who
+niranjan seat0        2024-12-30 14:37 (login screen)
+niranjan :0           2024-12-30 14:37 (:0)
+niranjan@ubuntu:~/scripts$ whoami
+niranjan
+niranjan@ubuntu:~/scripts$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000 
+6521|lalit choudury   |director   |marketing  |09/26/45|125000 
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000 
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000 
+0110|v.k agarwal      |g.m.       |marketing  |12/31/40| 95000
+niranjan@ubuntu:~/scripts$ head -n 5 emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+niranjan@ubuntu:~/scripts$ head -n 5 emp1.lst | tee shortlist
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+niranjan@ubuntu:~/scripts$ ls
+emp1.lst  emp.lst  hello.sh  shortlist  template.sh
+niranjan@ubuntu:~/scripts$ cat shortlist
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+niranjan@ubuntu:~/scripts$ cut -c 6-22, 24-32 shortlist2
+cut: byte/character positions are numbered from 1
+Try 'cut --help' for more information.
+niranjan@ubuntu:~/scripts$ cut -c 6-22,24-32 shortlist
+a.k. shukla      g.m      
+jai sharma       director 
+sumit chakrobartyd.g.m    
+barun sengupta   director 
+n.k. gupta       chairman 
+niranjan@ubuntu:~/scripts$ cut -c 6-22,24-32 shortlist2
+cut: shortlist2: No such file or directory
+niranjan@ubuntu:~/scripts$ cut -d \| -f 2,3 shortlist | tee cutlist1
+a.k. shukla      |g.m        
+jai sharma       |director   
+sumit chakrobarty|d.g.m      
+barun sengupta   |director   
+n.k. gupta       |chairman   
+niranjan@ubuntu:~/scripts$ cut -d "|" -f 1,4- shortlist >  cutlist2
+niranjan@ubuntu:~/scripts$ cat cutlist2
+2233|sales      |12/12/52| 90000
+9876|production |03/12/50|130000
+5678|marketing  |04/19/43| 85000
+2365|personnel  |05/11/47|120000
+5423|admin      |08/30/56|160000
+niranjan@ubuntu:~/scripts$ ls
+cutlist1  cutlist2  emp1.lst  emp.lst  hello.sh  shortlist  template.sh
+niranjan@ubuntu:~/scripts$ paste cutlist1 cutlist2
+a.k. shukla      |g.m        	2233|sales      |12/12/52| 90000
+jai sharma       |director   	9876|production |03/12/50|130000
+sumit chakrobarty|d.g.m      	5678|marketing  |04/19/43| 85000
+barun sengupta   |director   	2365|personnel  |05/11/47|120000
+n.k. gupta       |chairman   	5423|admin      |08/30/56|160000
+niranjan@ubuntu:~/scripts$ sort -t "|" -k 2 shortlist
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+niranjan@ubuntu:~/scripts$ sort -t "|" -k 3,3 -k 2,2 shortlist
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+niranjan@ubuntu:~/scripts$ grub 
+Command 'grub' not found, did you mean:
+  command 'grun' from deb grun (0.9.3+git20200303-3)
+  command 'grab' from deb grab (3.0.1-3build1)
+Try: sudo apt install <deb name>
+niranjan@ubuntu:~/scripts$ grep "gupta" emp1.lst
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000 
+niranjan@ubuntu:~/scripts$ grep -r "|a" emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000 
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000 
+niranjan@ubuntu:~/scripts$ 
+
